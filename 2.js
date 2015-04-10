@@ -29,4 +29,3 @@ var colors=new Array();
 		}
 		var values=[0,1,5,3,4,10,15];
 		values.sort(compare);
-		console.log(values);
