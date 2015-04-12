@@ -415,6 +415,7 @@ var now=new Date();
 	}();
 	*/
 
+	/*
 	function BaseComponent() {
 
 	}
@@ -440,3 +441,39 @@ var now=new Date();
 	}();
 	application.registerComponent(new OtherComponent());
 	console.log(application.getComponent());
+	*/
+	/*闭包*/
+	var datamodel = {  
+	    table : [],  
+	    tree : {}  
+	};  
+	   
+	(function(dm){  
+	    for(var i = 0; i < dm.table.rows; i++){  
+	       var row = dm.table.rows[i];  
+	       for(var j = 0; j < row.cells; i++){  
+	           drawCell(i, j);  
+	       }  
+	    }  
+	     
+	    //build dm.tree    
+	})(datamodel); 
+
+	var person = function(){  
+    //变量作用域为函数内部，外部无法访问  
+    var name = "default";     
+     
+    return {  
+       getName : function(){  
+           return name;  
+       },  
+       setName : function(newName){  
+           name = newName;  
+       }  
+    }  
+}();  
+   
+console.log(person.name);//直接访问，结果为undefined  
+console.log(person.getName());  
+person.setName("abruzzi");  
+console.log(person.getName());  
