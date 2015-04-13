@@ -442,7 +442,7 @@ var now=new Date();
 	application.registerComponent(new OtherComponent());
 	console.log(application.getComponent());
 	*/
-	/*闭包*/
+	/*
 	var datamodel = {  
 	    table : [],  
 	    tree : {}  
@@ -460,7 +460,6 @@ var now=new Date();
 	})(datamodel); 
 
 	var person = function(){  
-    //变量作用域为函数内部，外部无法访问  
     var name = "default";     
      
     return {  
@@ -473,7 +472,105 @@ var now=new Date();
     }  
 }();  
    
-console.log(person.name);//直接访问，结果为undefined  
+console.log(person.name);//undefined  
 console.log(person.getName());  
 person.setName("abruzzi");  
 console.log(person.getName());  
+function f1(){
+	n=999;
+	f2=function (){
+		console.log(n);
+	};
+	f3=function(){
+		n++;
+	};
+	return f2;
+}
+var result=f1();
+result(); // 999
+f3();
+result();
+
+	var name = "The Window";
+	var object = {
+		name : "My Object",
+		getNameFunc : function(){
+			return function(){
+				return this.name;
+			};
+		} 
+	};  
+	console.log(object.getNameFunc()());  //The Window
+
+	function Person(){  
+    var name = "default";     
+     
+    return {  
+       getName : function(){  
+           return name;  
+       },  
+       setName : function(newName){  
+           name = newName;  
+       }  
+    }  
+};  
+   
+ */
+	
+	/*
+ function createFunctions(){
+		var result=new Array();
+		for(var i=0;i<10;i++){
+			result[i]=function(num){
+				return num;
+
+			}(i);//????????????????????????????????????
+		}
+		return result;
+	}
+	var funcs=createFunctions();
+	for(var i=0;i<10;i++){
+		console.log(funcs[i]+"<br/><br/>");
+	}//Navigated to file:///E:/git/SublimeGitTest/1.html
+
+	function createFunctions2(){
+		var result=new Array();
+		for(var i=0;i<10;i++){
+			result[i]=function(num){
+				return function(){
+					return num;
+				};
+			}(i);//????????????????????????????????????
+		}
+		return result;
+	}
+	var funcs2=createFunctions2();
+	for(var i=0;i<10;i++){
+		console.log(funcs2[i]()+"<br/>");
+	}
+	*/
+	/*
+	function createFunctions(){
+		var result=new Array();
+		for(var i=0;i<10;i++){
+			result[i]=function(){
+				return i;
+			};//????????????????????????????????????
+		}
+		//i=20;
+		return result;
+	}
+	var funcs=createFunctions();
+	for(var i=0;i<10;i++){
+		console.log(funcs[i]()+"<br/>");
+	}
+	*/
+	function outputNumbers(count){
+		for(var i=0;i<count;i++){
+			console.log(i);
+		}
+		var i=99;
+		console.log(i);
+	}
+	outputNumbers(5);
+	
