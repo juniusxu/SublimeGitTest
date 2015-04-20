@@ -138,4 +138,20 @@ var client=function(){
 		system:system
 	};
 }();
-console.log(client.browser);
+
+function getObj(obj){
+	var objKeys = Object.keys(obj);
+	//objKeys = objKeys.sort();//这里写所需要的规则
+	for(var i=0;i<objKeys.length;i++){
+		alert(objKeys[i]+" : "+obj[objKeys[i]]);
+	}
+}
+
+for(var o in client){
+	//使用getObj函数
+	//getObj(client[o]);
+	//不使用函数，相当于二维数组
+	for(var oChild in client[o]){
+		alert(o+'的属性：\n['+oChild+']='+client[o][oChild]);
+	}
+}
