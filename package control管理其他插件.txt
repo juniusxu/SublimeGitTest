@@ -1,0 +1,48 @@
+package 				control管理其他插件
+emmet					HTML/CSS代码快速编写神器
+SublimeLinter			代码检测（总框架，每个不同的语言需要分别安装对应的hint插件，如校验js时，需安装jshint插件）,用于高亮提示用户编写的代码中存在的不规范和错误的写法，支持JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言。
+
+SublimeLinter-jshint	需先安装nodejs，并配置校验引擎preference-package setting-sublimelinter-user将sublimelinter_executable_map设置为nodejs.exe的路径
+
+SublimeTmpl 			快速生成文件模板ctrl+alt+h html、ctrl+alt+j javascript、ctrl+alt+c css、ctrl+alt+p php、ctrl+alt+r ruby、ctrl+alt+shift+p python
+sublime code intel 		代码提示插件
+Sidebar Enhancements	增强侧边栏
+Alignment				代码对齐插件；等号对齐
+Bracket Highlighter		括号高亮匹配；
+Git						整合 Git 功能的插件；
+jQuery					代码智能提示插件；
+web inspector			在 Sublime Edit 编辑器中直接调试 JavaScript 代码
+AngularJS				支持AngularJS 进行快速开发
+Hex-to-HSL-Color 		Hex颜色模式转HSL颜色模式
+JsFormat 				javascript格式化,快捷键Ctrl+Alt+F
+ConvertToUTF8			除UTF8编码之外的其他编码在Sublime Text中转换称UTF8编码
+Javascript Beautify		美化js代码
+Nettuts Fetch			设置一些需要同步的文件列表,然后保存更新.
+
+Theme-SpaceGray			更换sublime主题,install以后，需要将安装完成弹出的显示信息Package Control Messages中的theme与color_scheme复制到preference->settings-user文件中
+
+DocBlockr				快速注释
+
+
+
+插件安装完成后，需要设置，preference->settings-user
+
+
+ctrl+shift+d 			快速复制某一行
+
+多行游标
+ctrl+D 					每次选中一个 ctrl+K跳过某行 
+alt+F3					全部选中
+ctrl+a与ctrl+shift+l 	每行结尾
+shitf+鼠标右键拖动
+
+命令模式
+切换语法模式			右下角Plain Text进行选择/ ctrl+shitf+p，Set syntax:javascript（js语言）
+
+生成一段html			设置当前语法模式为html后，使用Emmet，输入！，ctrl+e
+当前行的下方添加行		ctrl+enter
+生成多个html标签		标签>.class类名$*个数，ctrl+e;如 ul>.item*10，ctrl+e后，<ul><li class="item1...item10"></li></ul>
+增加缩进				ctrl+}
+减少缩进				ctrl+{
+{输出内容}				h2{内容}，ctrl+e,生成<h2>内容</h2>
+复制代码时，保持缩进	ctrl+shift+v

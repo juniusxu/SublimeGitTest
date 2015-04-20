@@ -5,7 +5,7 @@
  * @version $Id$
  */
 
-var colors=new Array();
+		var colors=new Array();
 		var count=colors.push("red","green");
 		colors[colors.length]="black";
 		
