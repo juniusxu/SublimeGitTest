@@ -41,7 +41,7 @@ shitf+鼠标右键拖动
 
 生成一段html			设置当前语法模式为html后，使用Emmet，输入！，ctrl+e
 当前行的下方添加行		ctrl+enter
-生成多个html标签		标签>.class类名$*个数，ctrl+e;如 ul>.item*10，ctrl+e后，<ul><li class="item1...item10"></li></ul>
+生成多个html标签		标签>.class类名$*个数，ctrl+e;如 ul>.item$*10，ctrl+e后，<ul><li class="item1...item10"></li></ul>
 增加缩进				ctrl+}
 减少缩进				ctrl+{
 {输出内容}				h2{内容}，ctrl+e,生成<h2>内容</h2>
